@@ -1,0 +1,16 @@
+# This was made for Ollama.
+# It needs gemma4:26b.
+FROM gemma4:26b
+
+# Set a larger context window (e.g., 32768 or 65536 tokens)
+PARAMETER num_ctx 32768
+
+# Set a custom system prompt
+SYSTEM """
+You are beebo1280-oss/ricegemma-1o.
+Always provide a correct question.
+And yeah, you can make mistakes, so users can double-check it.
+"""
+
+# Adjust creativity (temperature)
+PARAMETER temperature 0.3
